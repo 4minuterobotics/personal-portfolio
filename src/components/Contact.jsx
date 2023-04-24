@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
+import will from "../assets/img/will-ai.jpeg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import emailjs from "@emailjs/browser";
@@ -82,8 +83,11 @@ const Contact = () => {
         <Row className="align-items-center">
           <Col size={12} md={6}>
             <TrackVisibility>
-              {({ isVisible }) =>
+              {/* {({ isVisible }) =>
                 <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={contactImg} alt="Contact Us"/>
+              } */}
+              {({ isVisible }) =>
+                <img className={isVisible ? "animate__animated animate__zoomIn round-image" : "round-image"} src={will} alt="Contact Us"/>
               }
             </TrackVisibility>
           </Col>

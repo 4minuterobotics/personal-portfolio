@@ -11,6 +11,7 @@ import shockfat from "../assets/img/shockfat.png";
 import monster from "../assets/img/monster.png";
 import drewit from "../assets/img/drewit.png";
 import amazona from "../assets/img/amazona.png";
+import wallstreetblast from "../assets/img/wallstreetblast.png";
 
 import ali from "../assets/img/ali.png"
 import startupwebsites from "../assets/img/startupwebsites.jpg"
@@ -26,6 +27,27 @@ import React from 'react'
 const Projects = () => {
 
   const projects = [
+    {
+      title: "Gambling App",
+      description: "Currently in developement and only viewbale on mobile, users will be able to place 3 simultaneous bets using various currencies. Backed utilizes web sockets for multiplayer.",
+      imgUrl: wallstreetblast,
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "MySQL, Web Sockets, World Pay",
+          color: "green-text-gradient",
+        },
+        {
+          name: "SASS",
+          color: "orange-text-gradient",
+        },
+      ],
+      source_code_link: "https://github.com/4minuterobotics/wall-street-blast",
+      website_link: "https://wall-street-blast.vercel.app/",
+    },
     {
       title: "E-commerce Store",
       description: "Users can create an account, search for items, and make payment using PayPal or Stripe. Includes an admin dashboard.",
@@ -104,7 +126,7 @@ const Projects = () => {
     },
     {
       title: "Web Dev Agency",
-      description: "A web development agency built on WIX using their VELO api.",
+      description: "My own web development agency website built on WIX using their VELO api.",
       imgUrl: startup,
       tags: [
         {
@@ -217,11 +239,8 @@ const Projects = () => {
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                     </Tab.Pane> */}
                     <Tab.Pane eventKey="third">
-                      <p>I have 10 years experience in high school science education, 
-                      with 10 years teaching chemistry and environmentalscience.
-                      7 years of total experience in tech, with 7 years as an Arduino 
-                      robotics instructor, 3 years as a freelance websitebuilder, and 
-                      2.5 years as a MERN stack developer.</p>
+                      <p>10 years in high school science education and 
+                      7 years in tech.</p>
                       <div className = "component" id="experience">
                         <div className='mt-20 flex flex-col'>
                           <VerticalTimeline>

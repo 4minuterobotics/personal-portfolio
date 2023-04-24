@@ -259,6 +259,9 @@ span.navbar-text {
   padding-right: 30px;
 }
 
+.round-image{
+  border-radius: 50%;
+}
 @media (min-width: 768px){
   .subscribe-button-Will .col-md-6 {
       flex: 0 0 auto;

@@ -22,6 +22,7 @@ import typescript from "../assets/img/typescript.png";
 import threejs from "../assets/img/threejs.svg";
 import wordpress from "../assets/img/wordpress.png"
 import arduino from "../assets/img/arduino.png"
+import sql from "../assets/img/sql.png"
 
 
 import React from 'react'
@@ -61,8 +62,8 @@ const Technologies = () => {
                                     <h5>CSS</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={docker} alt="tech" />
-                                    <h5>Docker</h5>
+                                    <img src={sql} alt="tech" />
+                                    <h5>SQL</h5>
                                 </div>
                                 <div className="item">
                                     <img src={figma} alt="tech" />
