@@ -29,7 +29,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Gambling App",
-      description: "Currently in developement and only viewbale on mobile, users will be able to place 3 simultaneous bets using various currencies. Backed utilizes web sockets for multiplayer.",
+      description: "Currently in developement and only viewbale on mobile, users will be able to place 3 simultaneous bets using various currencies. Back end utilizes web sockets for multiplayer.",
       imgUrl: wallstreetblast,
       tags: [
         {
@@ -50,7 +50,7 @@ const Projects = () => {
     },
     {
       title: "E-commerce Store",
-      description: "Users can create an account, search for items, and make payment using PayPal or Stripe. Includes an admin dashboard.",
+      description: "Currentlly in development, users can create an account, search for items, and make payment using PayPal or Stripe. Includes an admin dashboard.",
       imgUrl: amazona,
       tags: [
         {
@@ -71,7 +71,7 @@ const Projects = () => {
     },
     {
       title: "AI Image Generator",
-      description: "Takes prompts from users, converts it to an image, and uses cloud storage to save and re-access photos.",
+      description: "A tribute to my late younger brother Drew, this web app takes prompts from users, converts it to an image, and uses cloud storage to save and re-access photos.",
       imgUrl: drewit,
       tags: [
         {
