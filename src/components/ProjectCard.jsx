@@ -83,10 +83,10 @@ export const ProjectCard = ({ title, description, imgUrl, tags, source_code_link
         <div className="proj-txtx">
           <h4 className="project-card-title">{title}</h4>
         </div>
-      </div>
+       </div>
     </Col>
 
-    <MyVerticallyCenteredModal
+    <MyVerticallyCenteredModal 
         show={modalShow}
         onHide={() => setModalShow(false)}
         title={title}
@@ -98,7 +98,7 @@ export const ProjectCard = ({ title, description, imgUrl, tags, source_code_link
       />
       </>
 
-  )
+) 
  
 }
 //vs code installed extensions
