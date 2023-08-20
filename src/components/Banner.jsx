@@ -5,6 +5,8 @@ import cartoonMe from '../assets/img/cartoon-me1.png';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { HashLink } from 'react-router-hash-link';
+
 import React from 'react';
 
 const Banner = () => {
@@ -72,9 +74,11 @@ const Banner = () => {
 										working closely with clients to create efficient, user-friendly solutions that solve real-world problems while scaling
 										effectively.
 									</p>
-									<button onClick={() => console.log('connect')}>
-										Let’s Connect <ArrowRightCircle size={25} />
-									</button>
+									<HashLink to='#connect' className='connectLink'>
+										<button onClick={() => console.log('connect')}>
+											Let’s Connect <ArrowRightCircle size={25} />
+										</button>
+									</HashLink>
 								</div>
 							)}
 						</TrackVisibility>
