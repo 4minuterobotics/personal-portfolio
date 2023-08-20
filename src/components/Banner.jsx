@@ -52,28 +52,17 @@ const Banner = () => {
 	};
 
 	return (
-		<section
-			className='banner'
-			id='home'
-		>
+		<section className='banner' id='home'>
 			<Container>
 				<Row className='align-items-center'>
-					<Col
-						xs={12}
-						md={6}
-						xl={7}
-					>
+					<Col xs={12} md={6} xl={7}>
 						<TrackVisibility partialVisibility>
 							{({ isVisible }) => (
 								<div className={isVisible ? 'animate__animated animate__fadeIn' : ''}>
 									<span className='tagline'>Welcome to my Portfolio</span>
 									<h1>
 										{`Hi! I'm Will - `} <br />{' '}
-										<span
-											className='txt-rotate'
-											dataPeriod='1000'
-											data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
-										>
+										<span className='txt-rotate' dataPeriod='1000' data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'>
 											<span className='wrap'>{text}</span>
 										</span>
 									</h1>
@@ -90,18 +79,11 @@ const Banner = () => {
 							)}
 						</TrackVisibility>
 					</Col>
-					<Col
-						xs={12}
-						md={6}
-						xl={5}
-					>
+					<Col xs={12} md={6} xl={5}>
 						<TrackVisibility partialVisibility>
 							{({ isVisible }) => (
 								<div className={isVisible ? 'animate__animated animate__zoomIn' : ''}>
-									<img
-										src={cartoonMe}
-										alt='Header Img'
-									/>
+									<img src={cartoonMe} alt='Header Img' />
 								</div>
 							)}
 						</TrackVisibility>

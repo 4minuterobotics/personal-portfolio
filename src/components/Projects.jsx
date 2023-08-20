@@ -263,27 +263,17 @@ const Projects = () => {
 	];
 
 	return (
-		<section
-			className='project'
-			id='projects'
-		>
+		<section className='project' id='projects'>
 			<Container>
 				<Row>
 					<Col size={12}>
-						<TrackVisibility>
+						<TrackVisibility partialVisibility>
 							{({ isVisible }) => (
 								<div className={isVisible ? 'animate__animated animate__fadeIn' : ''}>
 									<h2>Projects & Experience</h2>
 									<p>Click either tab to view my projects and work experience.</p>
-									<Tab.Container
-										id='projects-tabs'
-										defaultActiveKey='first'
-									>
-										<Nav
-											variant='pills'
-											className='nav-pills mb-5 justify-content-center align-items-center'
-											id='pills-tab'
-										>
+									<Tab.Container id='projects-tabs' defaultActiveKey='first'>
+										<Nav variant='pills' className='nav-pills mb-5 justify-content-center align-items-center' id='pills-tab'>
 											<Nav.Item>
 												<Nav.Link eventKey='first'>Projects</Nav.Link>
 											</Nav.Item>
@@ -294,19 +284,11 @@ const Projects = () => {
 												<Nav.Link eventKey='third'>Experience</Nav.Link>
 											</Nav.Item>
 										</Nav>
-										<Tab.Content
-											id='slideInUp'
-											className={isVisible ? 'animate__animated animate__slideInUp' : ''}
-										>
+										<Tab.Content id='slideInUp' className={isVisible ? 'animate__animated animate__slideInUp' : ''}>
 											<Tab.Pane eventKey='first'>
 												<Row>
 													{projects.map((project, index) => {
-														return (
-															<ProjectCard
-																key={index}
-																{...project}
-															/>
-														);
+														return <ProjectCard key={index} {...project} />;
 													})}
 												</Row>
 											</Tab.Pane>
@@ -315,17 +297,11 @@ const Projects = () => {
                     </Tab.Pane> */}
 											<Tab.Pane eventKey='third'>
 												<p>10 years in high school science education and 7 years in tech.</p>
-												<div
-													className='component'
-													id='experience'
-												>
+												<div className='component' id='experience'>
 													<div className='mt-20 flex flex-col'>
 														<VerticalTimeline>
 															{experiences.map((experience, index) => (
-																<ExperienceCard
-																	key={`experience-${index}`}
-																	experience={experience}
-																/>
+																<ExperienceCard key={`experience-${index}`} experience={experience} />
 															))}
 														</VerticalTimeline>
 													</div>
@@ -339,11 +315,7 @@ const Projects = () => {
 					</Col>
 				</Row>
 			</Container>
-			<img
-				className='background-image-right'
-				src={colorSharp2}
-				alt='background'
-			></img>
+			<img className='background-image-right' src={colorSharp2} alt='background'></img>
 		</section>
 	);
 };
