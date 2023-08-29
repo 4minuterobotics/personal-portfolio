@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import contactImg from '../assets/img/contact-img.svg';
-import will from '../assets/img/will-ai.jpeg';
+import will from '../assets/img/will-ai.webp';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import emailjs from '@emailjs/browser';
@@ -72,16 +72,10 @@ const Contact = () => {
 	};
 
 	return (
-		<section
-			className='contact'
-			id='connect'
-		>
+		<section className='contact' id='connect'>
 			<Container>
 				<Row className='align-items-center'>
-					<Col
-						size={12}
-						md={6}
-					>
+					<Col size={12} md={6}>
 						<TrackVisibility partialVisibility>
 							{/* {({ isVisible }) =>
                 <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={contactImg} alt="Contact Us"/>
@@ -91,60 +85,26 @@ const Contact = () => {
 									className={isVisible ? 'animate__animated animate__zoomIn round-image' : 'round-image'}
 									src={will}
 									alt='Contact Us'
+									load='lazy'
 								/>
 							)}
 						</TrackVisibility>
 					</Col>
-					<Col
-						size={12}
-						md={6}
-					>
+					<Col size={12} md={6}>
 						<TrackVisibility partialVisibility>
 							{({ isVisible }) => (
 								<div className={isVisible ? 'animate__animated animate__fadeIn' : ''}>
 									<h2>Get In Touch</h2>
-									<form
-										onSubmit={handleSubmit}
-										ref={formRef}
-									>
+									<form onSubmit={handleSubmit} ref={formRef}>
 										<Row>
-											<Col
-												size={12}
-												sm={6}
-												className='px-1'
-											>
-												<input
-													type='text'
-													name='name'
-													value={form.name}
-													placeholder='Name'
-													onChange={handleChange}
-												/>
+											<Col size={12} sm={6} className='px-1'>
+												<input type='text' name='name' value={form.name} placeholder='Name' onChange={handleChange} />
 											</Col>
-											<Col
-												size={12}
-												sm={6}
-												className='px-1'
-											>
-												<input
-													type='email'
-													name='email'
-													value={form.email}
-													placeholder='Email Address'
-													onChange={handleChange}
-												/>
+											<Col size={12} sm={6} className='px-1'>
+												<input type='email' name='email' value={form.email} placeholder='Email Address' onChange={handleChange} />
 											</Col>
-											<Col
-												size={12}
-												className='px-1'
-											>
-												<textarea
-													rows='6'
-													name='message'
-													value={form.message}
-													placeholder='Message'
-													onChange={handleChange}
-												></textarea>
+											<Col size={12} className='px-1'>
+												<textarea rows='6' name='message' value={form.message} placeholder='Message' onChange={handleChange}></textarea>
 												<button type='submit'>
 													<span>{buttonText}</span>
 												</button>

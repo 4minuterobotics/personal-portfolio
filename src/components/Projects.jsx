@@ -5,22 +5,22 @@ import ExperienceCard from './ExperienceCard';
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-import will from '../assets/img/will.png';
-import startup from '../assets/img/startup.png';
-import shockfat from '../assets/img/shockfat.png';
-import monster from '../assets/img/monster.png';
-import drewit from '../assets/img/drewit.png';
-import amazona from '../assets/img/amazona.png';
-import wallstreetblast from '../assets/img/wallstreetblast.png';
-import igHoldings from '../assets/img/igHoldings.png';
-import luxuryPicnics from '../assets/img/luxuryPicnics.png';
-import rightDirection from '../assets/img/rightDirection.png';
+import will from '../assets/img/will.webp';
+import startup from '../assets/img/startup.webp';
+import shockfat from '../assets/img/shockfat.webp';
+import monster from '../assets/img/monster.webp';
+import drewit from '../assets/img/drewit.webp';
+import amazona from '../assets/img/amazona.webp';
+import wallstreetblast from '../assets/img/wallstreetblast.webp';
+import igHoldings from '../assets/img/igHoldings.webp';
+import luxuryPicnics from '../assets/img/luxuryPicnics.webp';
+import rightDirection from '../assets/img/rightDirection.webp';
 
-import ali from '../assets/img/ali.png';
-import startupwebsites from '../assets/img/startupwebsites.jpg';
-import wildcat from '../assets/img/wildcat.jpeg';
+import ali from '../assets/img/ali.webp';
+import startupwebsites from '../assets/img/startupwebsites.webp';
+import wildcat from '../assets/img/wildcat.webp';
 
-import colorSharp2 from '../assets/img/color-sharp2.png';
+import colorSharp2 from '../assets/img/color-sharp2.webp';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
