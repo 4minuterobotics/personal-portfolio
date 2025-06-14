@@ -7,6 +7,13 @@ import 'react-multi-carousel/lib/styles.css';
 // import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from '../assets/img/color-sharp.webp';
 
+import fusionCert from '../assets/img/Autodeskfusion360.webp';
+import ccstCert from '../assets/img/CCST.webp';
+import securityPlusCert from '../assets/img/ComptiaSecurityPlus.webp';
+import htmlcssCert from '../assets/img/ITSpecialistHTMLandCSS.webp';
+import javascriptCert from '../assets/img/ITSpecialistJavascript.webp';
+import pythonCert from '../assets/img/ITSpecialistPython.webp';
+import PMICert from '../assets/img/PMIProjectManagementReady.webp';
 import css from '../assets/img/css.webp';
 import docker from '../assets/img/docker.webp';
 import figma from '../assets/img/figma.webp';
@@ -25,6 +32,7 @@ import arduino from '../assets/img/arduino.webp';
 import sql from '../assets/img/sql.webp';
 
 import React from 'react';
+import { PinMap } from 'react-bootstrap-icons';
 
 const Technologies = () => {
 	const responsive = {
@@ -53,20 +61,40 @@ const Technologies = () => {
 				<div className='row'>
 					<div className='col-12'>
 						<div className='skill-bx wow zoomIn'>
-							<h2>Technologies</h2>
+							<h2>Skills</h2>
 							<p>
-								I use the following technologies regularly and have become second nature to me.<br></br> I'm still always willing to learn more and
-								expand my knowledge.
+								I use the following technologies regularly and have become second nature to me.<br></br> I'm still always willing to learn more and expand my knowledge.
 							</p>
 							<Carousel responsive={responsive} infinite={true} className='owl-carousel owl-theme skill-slider'>
-								<div className='item'>
+								{/* <div className='item'>
 									<img src={css} alt='tech' />
 									<h5>CSS</h5>
+								</div> */}
+								<div className='item'>
+									<img src={securityPlusCert} alt='tech' />
+									<h5>Comptia Security+ Certified</h5>
+								</div>
+								<div className='item'>
+									<img src={PMICert} alt='tech' />
+									<h5>Project Management Certified</h5>
+								</div>
+								<div className='item'>
+									<img src={javascriptCert} alt='tech' />
+									<h5>JavaScript Certified</h5>
+								</div>
+								<div className='item'>
+									<img src={fusionCert} alt='tech' />
+									<h5>Fusion 360 CAD Certified</h5>
 								</div>
 								<div className='item'>
 									<img src={sql} alt='tech' />
 									<h5>SQL</h5>
 								</div>
+								<div className='item'>
+									<img src={mongodb} alt='tech' />
+									<h5>MongoDB</h5>
+								</div>
+
 								<div className='item'>
 									<img src={figma} alt='tech' />
 									<h5>Figma</h5>
@@ -75,18 +103,11 @@ const Technologies = () => {
 									<img src={git} alt='tech' />
 									<h5>git</h5>
 								</div>
-								<div className='item'>
+								{/* <div className='item'>
 									<img src={html} alt='tech' />
 									<h5>HTML 5</h5>
-								</div>
-								<div className='item'>
-									<img src={javascript} alt='tech' />
-									<h5>Javascript</h5>
-								</div>
-								<div className='item'>
-									<img src={mongodb} alt='tech' />
-									<h5>MongoDB</h5>
-								</div>
+								</div> */}
+
 								<div className='item'>
 									<img src={nodejs} alt='tech' />
 									<h5>Node JS</h5>
