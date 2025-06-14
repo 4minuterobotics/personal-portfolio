@@ -15,6 +15,8 @@ import wallstreetblast from '../assets/img/wallstreetblast.webp';
 import igHoldings from '../assets/img/igHoldings.webp';
 import luxuryPicnics from '../assets/img/luxuryPicnics.webp';
 import rightDirection from '../assets/img/rightDirection.webp';
+import beatEmUp from '../assets/img/beatemup.webp';
+import sideScroller from '../assets/img/sideScroller.webp';
 
 import ali from '../assets/img/ali.webp';
 import startupwebsites from '../assets/img/startupwebsites.webp';
@@ -28,49 +30,71 @@ import React from 'react';
 
 const Projects = () => {
 	const projects = [
+		// {
+		// 	title: 'Gambling App',
+		// 	description:
+		// 		'Currently in developement and only viewbale on mobile, users will be able to place 3 simultaneous bets using various currencies. Back end utilizes web sockets for multiplayer.',
+		// 	imgUrl: wallstreetblast,
+		// 	tags: [
+		// 		{
+		// 			name: 'react',
+		// 			color: 'blue-text-gradient',
+		// 		},
+		// 		{
+		// 			name: 'MySQL, Web Sockets, World Pay',
+		// 			color: 'green-text-gradient',
+		// 		},
+		// 		{
+		// 			name: 'SASS',
+		// 			color: 'orange-text-gradient',
+		// 		},
+		// 	],
+		// 	source_code_link: 'https://github.com/4minuterobotics/wall-street-blast',
+		// 	website_link: 'https://wall-street-blast.vercel.app/',
+		// },
+		// {
+		// 	title: 'E-commerce Store',
+		// 	description:
+		// 		'Currentlly in development, users can create an account, search for items, and make payment using PayPal or Stripe. Includes an admin dashboard.',
+		// 	imgUrl: amazona,
+		// 	tags: [
+		// 		{
+		// 			name: 'react',
+		// 			color: 'blue-text-gradient',
+		// 		},
+		// 		{
+		// 			name: 'mongodb, PayPal, Stripe',
+		// 			color: 'green-text-gradient',
+		// 		},
+		// 		{
+		// 			name: 'react bootstap',
+		// 			color: 'orange-text-gradient',
+		// 		},
+		// 	],
+		// 	source_code_link: 'https://github.com/4minuterobotics/amazonClone',
+		// 	website_link: 'https://wills-store-git-main-4minuterobotics.vercel.app/',
+		// },
 		{
-			title: 'Gambling App',
+			title: '2D Animated Game',
 			description:
-				'Currently in developement and only viewbale on mobile, users will be able to place 3 simultaneous bets using various currencies. Back end utilizes web sockets for multiplayer.',
-			imgUrl: wallstreetblast,
+				'This game is proof of concept of being able to import real people into video games. The guy in dress clothes is admin at the school where  I teach. This site displays my capabilities using the Canvas element and its animations. The character was animated using timed, customs cropped sprite sheets. The background shows parallax motion, to give depth. Best played on a computer. Attack with b, s, and space. Move with D-Pad.',
+			imgUrl: beatEmUp,
 			tags: [
 				{
 					name: 'react',
 					color: 'blue-text-gradient',
 				},
 				{
-					name: 'MySQL, Web Sockets, World Pay',
+					name: 'Canvas, 2D animation, game dev',
 					color: 'green-text-gradient',
 				},
 				{
-					name: 'SASS',
+					name: ' Move with directional buttons. Attack with b, s, and space',
 					color: 'orange-text-gradient',
 				},
 			],
-			source_code_link: 'https://github.com/4minuterobotics/wall-street-blast',
-			website_link: 'https://wall-street-blast.vercel.app/',
-		},
-		{
-			title: 'E-commerce Store',
-			description:
-				'Currentlly in development, users can create an account, search for items, and make payment using PayPal or Stripe. Includes an admin dashboard.',
-			imgUrl: amazona,
-			tags: [
-				{
-					name: 'react',
-					color: 'blue-text-gradient',
-				},
-				{
-					name: 'mongodb, PayPal, Stripe',
-					color: 'green-text-gradient',
-				},
-				{
-					name: 'react bootstap',
-					color: 'orange-text-gradient',
-				},
-			],
-			source_code_link: 'https://github.com/4minuterobotics/amazonClone',
-			website_link: 'https://wills-store-git-main-4minuterobotics.vercel.app/',
+			source_code_link: 'https://github.com/4minuterobotics/scalable-2d-game-beat-em-up',
+			website_link: 'https://mr-lawrence-the-township.vercel.app/#',
 		},
 		{
 			title: 'AI Image Generator',
@@ -93,6 +117,49 @@ const Projects = () => {
 			],
 			source_code_link: 'https://github.com/4minuterobotics/MERN-AI-image-generator',
 			website_link: 'https://drew-it-git-main-4minuterobotics.vercel.app/',
+		},
+		{
+			title: 'Luxury Picnics',
+			description: 'A website for booking luxury picnics in southern Florida. This website allows customers to view prodcucts and request bookings online.',
+			imgUrl: luxuryPicnics,
+			tags: [
+				{
+					name: 'reactjs',
+					color: 'blue-text-gradient',
+				},
+				{
+					name: 'emailjs',
+					color: 'green-text-gradient',
+				},
+				{
+					name: 'tailwind, framer motion, react-bootstrap',
+					color: 'orange-text-gradient',
+				},
+			],
+			source_code_link: 'https://github.com/4minuterobotics/luxurypicnics2',
+			website_link: 'https://luxurypicnics2-git-main-4minuterobotics-projects.vercel.app/',
+		},
+		{
+			title: 'Another 2D Animated Game',
+			description:
+				'This game is of the side scroller genre and shows my abilites to create multiple types of 2D animate games from scratch. Game is best played on a computer. Move with directional buttons. Attack with 1, 2, or 3',
+			imgUrl: sideScroller,
+			tags: [
+				{
+					name: 'reactjs',
+					color: 'blue-text-gradient',
+				},
+				{
+					name: 'Canvas, 2D animation, game dev',
+					color: 'green-text-gradient',
+				},
+				{
+					name: ' Move with directional buttons. Attack with 1, 2, or 3',
+					color: 'orange-text-gradient',
+				},
+			],
+			source_code_link: 'https://github.com/4minuterobotics/luxurypicnics2',
+			website_link: 'https://luxurypicnics2-git-main-4minuterobotics-projects.vercel.app/',
 		},
 		{
 			title: 'Animated Portfolio',
@@ -154,70 +221,49 @@ const Projects = () => {
 			source_code_link: '',
 			website_link: 'https://www.shockfat.com',
 		},
-		{
-			title: 'Luxury Picnics',
-			description:
-				'A website for booking luxury picnics in southern Florida. This website allows customers to view prodcucts and request bookings online.',
-			imgUrl: luxuryPicnics,
-			tags: [
-				{
-					name: 'reactjs',
-					color: 'blue-text-gradient',
-				},
-				{
-					name: 'emailjs',
-					color: 'green-text-gradient',
-				},
-				{
-					name: 'tailwind, framer motion, react-bootstrap',
-					color: 'orange-text-gradient',
-				},
-			],
-			source_code_link: 'https://github.com/4minuterobotics/luxury-picnics',
-			website_link: 'https://www.luxurypicnicrentals.com',
-		},
-		{
-			title: 'Integrated Health',
-			description: 'A website used as the main resource reference for an integrated health company in Arizona.',
-			imgUrl: igHoldings,
-			tags: [
-				{
-					name: 'reactjs',
-					color: 'blue-text-gradient',
-				},
-				{
-					name: 'emailjs',
-					color: 'green-text-gradient',
-				},
-				{
-					name: 'tailwind, framer motion, react-bootstrap',
-					color: 'orange-text-gradient',
-				},
-			],
-			source_code_link: 'https://github.com/4minuterobotics/ig-holdings',
-			website_link: 'https://www.shockfat.com',
-		},
-		{
-			title: 'Behavioral Specialists',
-			description: 'A website for a life coaching and therapy company in Arizona. Currently under construction.',
-			imgUrl: rightDirection,
-			tags: [
-				{
-					name: 'reactjs',
-					color: 'blue-text-gradient',
-				},
-				{
-					name: 'emailjs',
-					color: 'green-text-gradient',
-				},
-				{
-					name: 'tailwind, framer motion, react-bootstrap',
-					color: 'orange-text-gradient',
-				},
-			],
-			source_code_link: 'https://github.com/4minuterobotics/the-right-direction',
-			website_link: 'https://www.the-right-direction.vercel.app/',
-		},
+
+		// {
+		// 	title: 'Integrated Health',
+		// 	description: 'A website used as the main resource reference for an integrated health company in Arizona.',
+		// 	imgUrl: igHoldings,
+		// 	tags: [
+		// 		{
+		// 			name: 'reactjs',
+		// 			color: 'blue-text-gradient',
+		// 		},
+		// 		{
+		// 			name: 'emailjs',
+		// 			color: 'green-text-gradient',
+		// 		},
+		// 		{
+		// 			name: 'tailwind, framer motion, react-bootstrap',
+		// 			color: 'orange-text-gradient',
+		// 		},
+		// 	],
+		// 	source_code_link: 'https://github.com/4minuterobotics/',
+		// 	website_link: 'https://delriocenter.org',
+		// },
+		// {
+		// 	title: 'Behavioral Specialists',
+		// 	description: 'A website for a life coaching and therapy company in Arizona. Currently under construction.',
+		// 	imgUrl: rightDirection,
+		// 	tags: [
+		// 		{
+		// 			name: 'reactjs',
+		// 			color: 'blue-text-gradient',
+		// 		},
+		// 		{
+		// 			name: 'emailjs',
+		// 			color: 'green-text-gradient',
+		// 		},
+		// 		{
+		// 			name: 'tailwind, framer motion, react-bootstrap',
+		// 			color: 'orange-text-gradient',
+		// 		},
+		// 	],
+		// 	source_code_link: 'https://github.com/4minuterobotics/the-right-direction',
+		// 	website_link: 'https://www.the-right-direction.vercel.app/',
+		// },
 	];
 
 	const experiences = [

@@ -49,7 +49,7 @@ export const ProjectCard = ({ title, description, imgUrl, tags, source_code_link
 		<>
 			<Col size={12} sm={12} md={6}>
 				<div className='proj-imgbx' onClick={() => setModalShow(true)}>
-					<img src={imgUrl} />
+					<img className='proj-img' src={imgUrl} />
 
 					<div className='proj-txtx'>
 						<h4 className='project-card-title'>{title}</h4>

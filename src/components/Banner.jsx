@@ -69,10 +69,10 @@ const Banner = () => {
 										</span>
 									</h1>
 									<p>
-										I'm an experienced software developer with a passion for web development. I have extensive experience in JavaScript and specialize
-										in popular frameworks such as React, Node.js, MongoDB, and Three.js. I'm a team player who loves learning new technologies and
-										working closely with clients to create efficient, user-friendly solutions that solve real-world problems while scaling
-										effectively.
+										I'm a full-stack developer and educator with a strong foundation in JavaScript, React, Node.js, and PostgreSQL. I specialize in building secure, scalable
+										web applications using modern frameworks and tools, including session-based authentication, Stripe payments, Google OAuth, and API integrations. As an
+										experienced instructor, I teach web development, cybersecurity, 3D modeling with Fusion 360, and Arduino robotics. I thrive in both collaborative and
+										independent environments, love solving real-world problems, and bring a practical, user-centered approach to every project I take on.
 									</p>
 									<HashLink to='#connect' className='connectLink'>
 										<button onClick={() => console.log('connect')}>
