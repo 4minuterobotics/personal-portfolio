@@ -21,6 +21,7 @@ import sideScroller from '../assets/img/sideScroller.webp';
 import ali from '../assets/img/ali.webp';
 import startupwebsites from '../assets/img/startupwebsites.webp';
 import wildcat from '../assets/img/wildcat.webp';
+import broward from '../assets/img/broward.webp';
 
 import colorSharp2 from '../assets/img/color-sharp2.webp';
 import 'animate.css';
@@ -30,50 +31,49 @@ import React from 'react';
 
 const Projects = () => {
 	const projects = [
-		// {
-		// 	title: 'Gambling App',
-		// 	description:
-		// 		'Currently in developement and only viewbale on mobile, users will be able to place 3 simultaneous bets using various currencies. Back end utilizes web sockets for multiplayer.',
-		// 	imgUrl: wallstreetblast,
-		// 	tags: [
-		// 		{
-		// 			name: 'react',
-		// 			color: 'blue-text-gradient',
-		// 		},
-		// 		{
-		// 			name: 'MySQL, Web Sockets, World Pay',
-		// 			color: 'green-text-gradient',
-		// 		},
-		// 		{
-		// 			name: 'SASS',
-		// 			color: 'orange-text-gradient',
-		// 		},
-		// 	],
-		// 	source_code_link: 'https://github.com/4minuterobotics/wall-street-blast',
-		// 	website_link: 'https://wall-street-blast.vercel.app/',
-		// },
-		// {
-		// 	title: 'E-commerce Store',
-		// 	description:
-		// 		'Currentlly in development, users can create an account, search for items, and make payment using PayPal or Stripe. Includes an admin dashboard.',
-		// 	imgUrl: amazona,
-		// 	tags: [
-		// 		{
-		// 			name: 'react',
-		// 			color: 'blue-text-gradient',
-		// 		},
-		// 		{
-		// 			name: 'mongodb, PayPal, Stripe',
-		// 			color: 'green-text-gradient',
-		// 		},
-		// 		{
-		// 			name: 'react bootstap',
-		// 			color: 'orange-text-gradient',
-		// 		},
-		// 	],
-		// 	source_code_link: 'https://github.com/4minuterobotics/amazonClone',
-		// 	website_link: 'https://wills-store-git-main-4minuterobotics.vercel.app/',
-		// },
+		{
+			title: 'Gambling App',
+			description:
+				'Currently in developement and only viewbale on mobile, users will be able to place 3 simultaneous bets using various currencies. Back end utilizes web sockets for multiplayer.',
+			imgUrl: wallstreetblast,
+			tags: [
+				{
+					name: 'react',
+					color: 'blue-text-gradient',
+				},
+				{
+					name: 'MySQL, Web Sockets, World Pay',
+					color: 'green-text-gradient',
+				},
+				{
+					name: 'SASS',
+					color: 'orange-text-gradient',
+				},
+			],
+			source_code_link: 'https://github.com/4minuterobotics/wall-street-blast',
+			website_link: 'https://wall-street-blast.vercel.app/',
+		},
+		{
+			title: 'E-commerce Store',
+			description: 'Currentlly in development, users can create an account, search for items, and make payment using PayPal or Stripe. Includes an admin dashboard.',
+			imgUrl: amazona,
+			tags: [
+				{
+					name: 'react',
+					color: 'blue-text-gradient',
+				},
+				{
+					name: 'mongodb, PayPal, Stripe',
+					color: 'green-text-gradient',
+				},
+				{
+					name: 'react bootstap',
+					color: 'orange-text-gradient',
+				},
+			],
+			source_code_link: 'https://github.com/4minuterobotics/amazonClone',
+			website_link: 'https://wills-store-git-main-4minuterobotics.vercel.app/',
+		},
 		{
 			title: '2D Animated Game',
 			description:
@@ -183,7 +183,7 @@ const Projects = () => {
 			website_link: 'https://williamlawrence.tech',
 		},
 		{
-			title: 'Bouncy House Rental',
+			title: 'WIX: Bouncy House Rental',
 			description: 'Users can schedule bookings and make payments. Admin features include complete Saas functionality.',
 			imgUrl: monster,
 			tags: [
@@ -196,7 +196,7 @@ const Projects = () => {
 			website_link: 'https://www.monsterbouncyhouses.com',
 		},
 		{
-			title: 'Web Dev Agency',
+			title: 'WIX: Web Dev Agency',
 			description: 'My own web development agency website built on WIX using their VELO api.',
 			imgUrl: startup,
 			tags: [
@@ -209,7 +209,7 @@ const Projects = () => {
 			website_link: 'https://www.startupwebsites.design',
 		},
 		{
-			title: 'Crossfit Gym',
+			title: 'WIX: Crossfit Gym',
 			description: 'An app for a small gym that allows its customers to view changing schedules, order supplements, and watch live stream workouts.',
 			imgUrl: shockfat,
 			tags: [
@@ -268,11 +268,25 @@ const Projects = () => {
 
 	const experiences = [
 		{
+			title: 'STEM & Web Development Instructor',
+			company_name: 'Pompano Beach High School',
+			icon: broward,
+			iconBg: '#383E56',
+			date: 'Sep 2023–Present',
+			points: [
+				'Taught full-stack development using React, JavaScript, and HTML/CSS, with emphasis on SPA design and user-focused workflows.',
+				'Taught Comptia Security + to certifying students.',
+				'Guided students through creating real-time simulations using JavaScript Canvas API and interactive DOM scripting to create 2D video games and with animations.',
+				'Introduced students to Arduino microcontroller programming to enhance 3D-printed designs with interactive hardware features such as sensors, motors, and LEDs.',
+				'Visit my class website made by me: www.pghsgames.com',
+			],
+		},
+		{
 			title: 'React.js Developer',
 			company_name: 'Ali Web Solutions',
 			icon: ali,
 			iconBg: '#383E56',
-			date: 'March 2023 - Present',
+			date: 'March 2023 - July 2023',
 			points: [
 				'Developing and maintaining web applications using React.js and other related technologies.',
 				'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
@@ -281,12 +295,18 @@ const Projects = () => {
 			],
 		},
 		{
-			title: 'Wix Freelance Developer',
+			title: 'Freelance Developer',
 			company_name: 'Startup Websites',
 			icon: startupwebsites,
 			iconBg: '#E6DEDD',
 			date: 'June 2021 - Present',
 			points: [
+				'Designed and delivered interactive SPAs using React, TypeScript, and modular UI components.',
+				'Built 2D animations using Canvas, and JavaScript.',
+				'Created flipbook-style sprite animations from sequential images of a person to integrate realistic character motion into a video game engine.',
+				'Developed financial and compliance-related interfaces supporting user-specific logic, secure sessions, and role-based access.',
+				'Created responsive, cross-browser interfaces optimized for speed and accessibility.',
+				'Collaborated directly with clients to prototype and iterate on key features based on user workflows.',
 				"Use Wix's tools to create websites for clients, either from scratch or by customizing existing templates.",
 				'Utilizing Software as a Service (SaaS) tools to meets customer needs and requirements. ',
 				'Developing engaging content, selecting relevant images, and optimizing SEO for website growth.',

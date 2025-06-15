@@ -83,6 +83,10 @@ const Technologies = () => {
 									<h5>JavaScript Certified</h5>
 								</div>
 								<div className='item'>
+									<img src={pythonCert} alt='tech' />
+									<h5>Python Certified</h5>
+								</div>
+								<div className='item'>
 									<img src={fusionCert} alt='tech' />
 									<h5>Fusion 360 CAD Certified</h5>
 								</div>
