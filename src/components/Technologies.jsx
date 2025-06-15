@@ -64,7 +64,9 @@ const Technologies = () => {
 							<h2>Skills</h2>
 							<p>
 								I use the following technologies regularly and have become second nature to me.<br></br> I'm still always willing to learn more and expand my knowledge.
+								<br></br>Click <a href='https://www.credly.com/users/william-lawrence.1a74efab'>HERE</a> to view my verified certifications on Credly.com.
 							</p>
+
 							<Carousel responsive={responsive} infinite={true} className='owl-carousel owl-theme skill-slider'>
 								{/* <div className='item'>
 									<img src={css} alt='tech' />
