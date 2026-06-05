@@ -76,7 +76,7 @@ const Contact = () => {
 			<Container>
 				<Row className='align-items-center'>
 					<Col size={12} md={6}>
-						<TrackVisibility partialVisibility>
+						<TrackVisibility partialVisibility once>
 							{/* {({ isVisible }) =>
                 <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={contactImg} alt="Contact Us"/>
               } */}
@@ -91,7 +91,7 @@ const Contact = () => {
 						</TrackVisibility>
 					</Col>
 					<Col size={12} md={6}>
-						<TrackVisibility partialVisibility>
+						<TrackVisibility partialVisibility once>
 							{({ isVisible }) => (
 								<div className={isVisible ? 'animate__animated animate__fadeIn' : ''}>
 									<h2>Get In Touch</h2>

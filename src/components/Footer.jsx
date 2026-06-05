@@ -12,7 +12,7 @@ const Footer = () => {
 		<footer className='footer'>
 			<Container>
 				<Row className='align-items-center'>
-					<MailchimpForm />
+					{/* <MailchimpForm /> hidden temporarily — re-enable once Mailchimp list is verified */}
 					{/* <Col size={12} sm={6}>
                 <img src={logo} alt="Logo" />
               </Col> */}
@@ -24,7 +24,7 @@ const Footer = () => {
 							{/* <a href="#"><img src={navIcon2} alt="Icon" /></a>
                   <a href="#"><img src={navIcon3} alt="Icon" /></a> */}
 						</div>
-						<p>Copyright 2023. All Rights Reserved</p>
+						<p>Copyright 2026. All Rights Reserved</p>
 					</Col>
 				</Row>
 			</Container>

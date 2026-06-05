@@ -15,7 +15,7 @@ const Banner = () => {
 	const [text, setText] = useState('');
 	const [delta, setDelta] = useState(300 - Math.random() * 100);
 	const [index, setIndex] = useState(1);
-	const toRotate = ['Web Developer', 'Web Designer', 'UI/UX Designer'];
+	const toRotate = ['Full-Stack Engineer', 'Educator', 'Product Builder'];
 	const period = 2000;
 
 	useEffect(() => {
@@ -58,21 +58,21 @@ const Banner = () => {
 			<Container>
 				<Row className='align-items-center'>
 					<Col xs={12} md={6} xl={7}>
-						<TrackVisibility partialVisibility>
+						<TrackVisibility partialVisibility once>
 							{({ isVisible }) => (
 								<div className={isVisible ? 'animate__animated animate__fadeIn' : ''}>
 									<span className='tagline'>Welcome to my Portfolio</span>
 									<h1>
 										{`Hi! I'm Will - `} <br />{' '}
-										<span className='txt-rotate' dataPeriod='1000' data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'>
+										<span className='txt-rotate' data-period='1000' data-rotate='[ "Full-Stack Engineer", "Educator", "Product Builder" ]'>
 											<span className='wrap'>{text}</span>
 										</span>
 									</h1>
 									<p>
-										I'm a full-stack developer and educator with a strong foundation in JavaScript, React, Node.js, and PostgreSQL. I specialize in building secure, scalable
-										web applications using modern frameworks and tools, including session-based authentication, Stripe payments, Google OAuth, and API integrations. As an
-										experienced instructor, I teach web development, cybersecurity, 3D modeling with Fusion 360, and Arduino robotics. I thrive in both collaborative and
-										independent environments, love solving real-world problems, and bring a practical, user-centered approach to every project I take on.
+										I'm a high-school STEM teacher in Florida who builds the software my classroom &mdash; and other teachers' classrooms &mdash; actually needs, then scales it
+										into real products. I work end-to-end across React, Next.js, PostgreSQL/Supabase, multi-tenant SaaS architecture, Stripe payments, and security-conscious
+										deployment (CompTIA Security+ certified, ISO 27001-aligned ISMS practice). Most projects on this site I built solo as PM, engineer, and end user simultaneously &mdash; an
+										unusual combination that's given me both product judgment and engineering depth.
 									</p>
 									<HashLink to='#connect' className='connectLink'>
 										<button onClick={() => console.log('connect')}>
@@ -84,7 +84,7 @@ const Banner = () => {
 						</TrackVisibility>
 					</Col>
 					<Col xs={12} md={6} xl={5}>
-						<TrackVisibility partialVisibility>
+						<TrackVisibility partialVisibility once>
 							{({ isVisible }) => (
 								<div className={isVisible ? 'animate__animated animate__zoomIn' : ''}>
 									<img src={cartoonMe} alt='Header Img' />

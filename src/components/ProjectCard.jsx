@@ -25,12 +25,19 @@ function MyVerticallyCenteredModal(props) {
 				</div>
 
 				<div className='github-div'>
-					<div onClick={() => window.open(props.source_code_link, '_blank')} className='github-link black-gradient'>
-						<img src={github} alt='source code' className='github-icon' />
-					</div>
-					<div className='website-link' onClick={() => window.open(props.website_link, '_blank')}>
-						<p>Visit Website</p>
-					</div>
+					{props.source_code_link && (
+						<div onClick={() => window.open(props.source_code_link, '_blank')} className='github-link black-gradient'>
+							<img src={github} alt='source code' className='github-icon' />
+						</div>
+					)}
+					{props.website_link && (
+						<div className='website-link' onClick={() => window.open(props.website_link, '_blank')}>
+							<p>Visit Website</p>
+						</div>
+					)}
+					{!props.source_code_link && !props.website_link && (
+						<p className='in-development-note' style={{ fontSize: '0.85rem', opacity: 0.7, marginTop: '0.5rem' }}>Live link and source coming soon.</p>
+					)}
 				</div>
 			</Modal.Body>
 			<Modal.Footer>

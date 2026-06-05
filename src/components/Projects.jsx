@@ -5,23 +5,19 @@ import ExperienceCard from './ExperienceCard';
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-import will from '../assets/img/will.webp';
-import startup from '../assets/img/startup.webp';
-import shockfat from '../assets/img/shockfat.webp';
-import monster from '../assets/img/monster.webp';
-import drewit from '../assets/img/drewit.webp';
-import amazona from '../assets/img/amazona.webp';
-import wallstreetblast from '../assets/img/wallstreetblast.webp';
-import igHoldings from '../assets/img/igHoldings.webp';
 import luxuryPicnics from '../assets/img/luxuryPicnics.webp';
-import rightDirection from '../assets/img/rightDirection.webp';
-import beatEmUp from '../assets/img/beatemup.webp';
-import sideScroller from '../assets/img/sideScroller.webp';
+import heardso from '../assets/img/heardso.webp';
+import schooltreasure from '../assets/img/schooltreasure.webp';
+import coursecreator from '../assets/img/coursecreator.webp';
+import camcorderrescue from '../assets/img/camcorderrescue.webp';
+import altech from '../assets/img/altech.webp';
+import inteled from '../assets/img/inteled.webp';
 
 import ali from '../assets/img/ali.webp';
 import startupwebsites from '../assets/img/startupwebsites.webp';
 import wildcat from '../assets/img/wildcat.webp';
 import broward from '../assets/img/broward.webp';
+import keypair from '../assets/img/keypair.svg';
 
 import colorSharp2 from '../assets/img/color-sharp2.webp';
 import 'animate.css';
@@ -29,256 +25,134 @@ import TrackVisibility from 'react-on-screen';
 
 import React from 'react';
 
+// Inline-SVG placeholder for projects without screenshots yet.
+// Swap imgUrl for a real screenshot import once a capture is available.
+const ph = (initials, accent) => {
+	const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250"><rect width="400" height="250" fill="#0F172A"/><rect y="240" width="400" height="10" fill="${accent}"/><text x="200" y="135" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="76" font-weight="700" fill="#E8EBF0">${initials}</text><text x="200" y="195" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" letter-spacing="3" fill="#94A0B5">SCREENSHOT COMING</text></svg>`;
+	return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+};
+
 const Projects = () => {
 	const projects = [
 		{
-			title: 'Gambling App',
+			title: 'SchoolTreasure',
 			description:
-				'Currently in developement and only viewbale on mobile, users will be able to place 3 simultaneous bets using various currencies. Back end utilizes web sockets for multiplayer.',
-			imgUrl: wallstreetblast,
+				"A FERPA-aware student work showcase platform. Teachers run public galleries of student projects with optional donor campaigns; students get classroom-appropriate logins. Built on React + Express + PostgreSQL with role-based JWT/session auth, Stripe donations across nine configurable campaigns, and Cloudinary media handling with sharp/ffmpeg metadata stripping for student privacy. Chose teacher-controlled redaction over public student profiles because FERPA-aware schools won't adopt anything that exposes student data by default.",
+			imgUrl: schooltreasure,
 			tags: [
-				{
-					name: 'react',
-					color: 'blue-text-gradient',
-				},
-				{
-					name: 'MySQL, Web Sockets, World Pay',
-					color: 'green-text-gradient',
-				},
-				{
-					name: 'SASS',
-					color: 'orange-text-gradient',
-				},
+				{ name: 'react + express', color: 'blue-text-gradient' },
+				{ name: 'postgreSQL · stripe · cloudinary', color: 'green-text-gradient' },
+				{ name: 'FERPA-aware · K-12', color: 'orange-text-gradient' },
 			],
-			source_code_link: 'https://github.com/4minuterobotics/wall-street-blast',
-			website_link: 'https://wall-street-blast.vercel.app/',
+			source_code_link: '',
+			website_link: 'https://example.schooltreasure.com',
 		},
 		{
-			title: 'E-commerce Store',
-			description: 'Currentlly in development, users can create an account, search for items, and make payment using PayPal or Stripe. Includes an admin dashboard.',
-			imgUrl: amazona,
+			title: 'StudyPerch',
+			description:
+				"In active development. A white-label online course platform for independent instructors to build, sell, and deliver courses without renting someone else's brand. Next.js App Router, Supabase (Postgres + Auth + Storage), Drizzle ORM, Cloudinary for video, drag-and-drop lesson reordering with @dnd-kit. Shipped Phase 1 as a deliberately single-tenant MVP so instructors could launch faster than competitors who force a marketplace model; multi-tenancy is a Phase 3 decision once the activation funnel is proven.",
+			imgUrl: coursecreator,
 			tags: [
-				{
-					name: 'react',
-					color: 'blue-text-gradient',
-				},
-				{
-					name: 'mongodb, PayPal, Stripe',
-					color: 'green-text-gradient',
-				},
-				{
-					name: 'react bootstap',
-					color: 'orange-text-gradient',
-				},
+				{ name: 'next.js · app router', color: 'blue-text-gradient' },
+				{ name: 'supabase · drizzle · stripe', color: 'green-text-gradient' },
+				{ name: 'white-label SaaS · in development', color: 'orange-text-gradient' },
 			],
-			source_code_link: 'https://github.com/4minuterobotics/amazonClone',
-			website_link: 'https://wills-store-git-main-4minuterobotics.vercel.app/',
+			source_code_link: '',
+			website_link: 'https://studyperch.com',
 		},
 		{
-			title: '2D Animated Game',
+			title: 'heardso — Multi-Tenant Streaming',
 			description:
-				'This game is proof of concept of being able to import real people into video games. The guy in dress clothes is admin at the school where  I teach. This site displays my capabilities using the Canvas element and its animations. The character was animated using timed, customs cropped sprite sheets. The background shows parallax motion, to give depth. Best played on a computer. Attack with b, s, and space. Move with D-Pad.',
-			imgUrl: beatEmUp,
+				'A Netflix-style multi-tenant streaming platform any creator can spin up under their own subdomain to monetize a media library — churches, schools, niche creators, SMB OTT. Same codebase, isolated tenants. Cloudflare Stream video pipeline with tus uploads and ffmpeg metadata strip, Stripe Connect destination charges for per-tenant payouts, multi-profile + kids gate, HLS quality picker, admin moderation. Originally scoped to schools then pivoted to vertical-agnostic when the same architecture cleanly served three other ICPs.',
+			imgUrl: heardso,
 			tags: [
-				{
-					name: 'react',
-					color: 'blue-text-gradient',
-				},
-				{
-					name: 'Canvas, 2D animation, game dev',
-					color: 'green-text-gradient',
-				},
-				{
-					name: ' Move with directional buttons. Attack with b, s, and space',
-					color: 'orange-text-gradient',
-				},
+				{ name: 'next.js · supabase', color: 'blue-text-gradient' },
+				{ name: 'cloudflare stream · stripe connect', color: 'green-text-gradient' },
+				{ name: 'multi-tenant SaaS', color: 'orange-text-gradient' },
 			],
-			source_code_link: 'https://github.com/4minuterobotics/scalable-2d-game-beat-em-up',
-			website_link: 'https://mr-lawrence-the-township.vercel.app/#',
+			source_code_link: '',
+			website_link: 'https://heardso.com',
 		},
 		{
-			title: 'AI Image Generator',
+			title: 'CamcorderRescue',
 			description:
-				'A tribute to my late younger brother Drew, this web app takes prompts from users, converts it to an image, and uses cloud storage to save and re-access photos.',
-			imgUrl: drewit,
+				'In active development. Recovers footage from dying camcorder media — MTS, AVCHD, Mini-DV, Hi8 — and converts it into modern formats families can actually watch. Next.js + Supabase + Cloudflare R2 storage, ffmpeg/sharp server-side conversion, credit-based billing with atomic credit accounting. Started life as a generalist file converter; pivoted to the camcorder niche after search-volume analysis showed clearer SEO leverage in a specific archival vertical with a real story.',
+			imgUrl: camcorderrescue,
 			tags: [
-				{
-					name: 'react',
-					color: 'blue-text-gradient',
-				},
-				{
-					name: 'mongodb, openAI, cloudinary',
-					color: 'green-text-gradient',
-				},
-				{
-					name: 'tailwind',
-					color: 'orange-text-gradient',
-				},
+				{ name: 'next.js · supabase', color: 'blue-text-gradient' },
+				{ name: 'ffmpeg · cloudflare R2 · stripe', color: 'green-text-gradient' },
+				{ name: 'credit-based billing · in development', color: 'orange-text-gradient' },
 			],
-			source_code_link: 'https://github.com/4minuterobotics/MERN-AI-image-generator',
-			website_link: 'https://drew-it-git-main-4minuterobotics.vercel.app/',
+			source_code_link: '',
+			website_link: 'https://camcorderrescue.com',
 		},
 		{
 			title: 'Luxury Picnics',
-			description: 'A website for booking luxury picnics in southern Florida. This website allows customers to view prodcucts and request bookings online.',
+			description:
+				'A booking site for a luxury picnic business in South Florida. Customers browse picnic packages and request bookings online; the proprietor handles confirmations through EmailJS. React + Tailwind + Framer Motion, designed to feel as premium as the service it promotes.',
 			imgUrl: luxuryPicnics,
 			tags: [
-				{
-					name: 'reactjs',
-					color: 'blue-text-gradient',
-				},
-				{
-					name: 'emailjs',
-					color: 'green-text-gradient',
-				},
-				{
-					name: 'tailwind, framer motion, react-bootstrap',
-					color: 'orange-text-gradient',
-				},
+				{ name: 'react', color: 'blue-text-gradient' },
+				{ name: 'tailwind · framer motion', color: 'green-text-gradient' },
+				{ name: 'emailJS', color: 'orange-text-gradient' },
 			],
 			source_code_link: 'https://github.com/4minuterobotics/luxurypicnics2',
 			website_link: 'https://luxurypicnics2-git-main-4minuterobotics-projects.vercel.app/',
 		},
 		{
-			title: 'Another 2D Animated Game',
+			title: 'AL-tech',
 			description:
-				'This game is of the side scroller genre and shows my abilites to create multiple types of 2D animate games from scratch. Game is best played on a computer. Move with directional buttons. Attack with 1, 2, or 3',
-			imgUrl: sideScroller,
+				"In active development. Mobile-first request routing for assisted-living facility staff: residents' meal, maintenance, transportation, housekeeping, and salon requests get consolidated into one routed system, replacing paper menus and hallway shouts. Next.js admin web + Expo mobile app, Supabase realtime, role-based access for floor nurses / supervisors / admin. Pilot facility lined up.",
+			imgUrl: altech,
 			tags: [
-				{
-					name: 'reactjs',
-					color: 'blue-text-gradient',
-				},
-				{
-					name: 'Canvas, 2D animation, game dev',
-					color: 'green-text-gradient',
-				},
-				{
-					name: ' Move with directional buttons. Attack with 1, 2, or 3',
-					color: 'orange-text-gradient',
-				},
-			],
-			source_code_link: 'https://github.com/4minuterobotics/luxurypicnics2',
-			website_link: 'https://luxurypicnics2-git-main-4minuterobotics-projects.vercel.app/',
-		},
-		{
-			title: 'Animated Portfolio',
-			description: 'A animation themed portfolio web app, displaying coding capability of 3D animation.',
-			imgUrl: will,
-			tags: [
-				{
-					name: 'reactjs',
-					color: 'blue-text-gradient',
-				},
-				{
-					name: 'emailjs',
-					color: 'green-text-gradient',
-				},
-				{
-					name: 'threejs, tailwind, framer motion ',
-					color: 'orange-text-gradient',
-				},
-			],
-			source_code_link: 'https://github.com/4minuterobotics/3d_portfolio/',
-			website_link: 'https://williamlawrence.tech',
-		},
-		{
-			title: 'WIX: Bouncy House Rental',
-			description: 'Users can schedule bookings and make payments. Admin features include complete Saas functionality.',
-			imgUrl: monster,
-			tags: [
-				{
-					name: 'WIX',
-					color: 'blue-text-gradient',
-				},
+				{ name: 'next.js · expo', color: 'blue-text-gradient' },
+				{ name: 'supabase realtime', color: 'green-text-gradient' },
+				{ name: 'mobile-first · in development', color: 'orange-text-gradient' },
 			],
 			source_code_link: '',
-			website_link: 'https://www.monsterbouncyhouses.com',
+			website_link: '',
 		},
 		{
-			title: 'WIX: Web Dev Agency',
-			description: 'My own web development agency website built on WIX using their VELO api.',
-			imgUrl: startup,
+			title: 'RestedTeacher',
+			description:
+				'In active development. AI-assisted lesson planning for high-school STEM teachers, rolling out subject-by-subject (chemistry first, then physics, biology, and high school math). Per-subject the workflow scans free CC-licensed visual material before falling back to AI generation, so commercial-safety is built in. React + Vite + AI pipeline. Co-built with a co-founder.',
+			imgUrl: inteled,
 			tags: [
-				{
-					name: 'WIX',
-					color: 'blue-text-gradient',
-				},
+				{ name: 'react · vite', color: 'blue-text-gradient' },
+				{ name: 'AI / LLM pipeline', color: 'green-text-gradient' },
+				{ name: 'edtech · in development', color: 'orange-text-gradient' },
 			],
 			source_code_link: '',
-			website_link: 'https://www.startupwebsites.design',
+			website_link: 'https://restedteacher.com',
 		},
-		{
-			title: 'WIX: Crossfit Gym',
-			description: 'An app for a small gym that allows its customers to view changing schedules, order supplements, and watch live stream workouts.',
-			imgUrl: shockfat,
-			tags: [
-				{
-					name: 'Wordpress',
-					color: 'green-text-gradient',
-				},
-			],
-			source_code_link: '',
-			website_link: 'https://www.shockfat.com',
-		},
-
-		// {
-		// 	title: 'Integrated Health',
-		// 	description: 'A website used as the main resource reference for an integrated health company in Arizona.',
-		// 	imgUrl: igHoldings,
-		// 	tags: [
-		// 		{
-		// 			name: 'reactjs',
-		// 			color: 'blue-text-gradient',
-		// 		},
-		// 		{
-		// 			name: 'emailjs',
-		// 			color: 'green-text-gradient',
-		// 		},
-		// 		{
-		// 			name: 'tailwind, framer motion, react-bootstrap',
-		// 			color: 'orange-text-gradient',
-		// 		},
-		// 	],
-		// 	source_code_link: 'https://github.com/4minuterobotics/',
-		// 	website_link: 'https://delriocenter.org',
-		// },
-		// {
-		// 	title: 'Behavioral Specialists',
-		// 	description: 'A website for a life coaching and therapy company in Arizona. Currently under construction.',
-		// 	imgUrl: rightDirection,
-		// 	tags: [
-		// 		{
-		// 			name: 'reactjs',
-		// 			color: 'blue-text-gradient',
-		// 		},
-		// 		{
-		// 			name: 'emailjs',
-		// 			color: 'green-text-gradient',
-		// 		},
-		// 		{
-		// 			name: 'tailwind, framer motion, react-bootstrap',
-		// 			color: 'orange-text-gradient',
-		// 		},
-		// 	],
-		// 	source_code_link: 'https://github.com/4minuterobotics/the-right-direction',
-		// 	website_link: 'https://www.the-right-direction.vercel.app/',
-		// },
 	];
 
 	const experiences = [
 		{
-			title: 'STEM & Web Development Instructor',
+			title: 'Founder',
+			company_name: 'Keypair Software LLC',
+			icon: keypair,
+			iconBg: '#F8FAFC',
+			date: 'May 2026 – Present',
+			points: [
+				'Founded Keypair Software LLC as the umbrella entity for a focused portfolio of education and creator software products.',
+				'Own end-to-end product, engineering, growth, and security across a multi-tenant streaming platform with Stripe Connect payouts, a white-label course platform on Next.js + Supabase, a FERPA-aware student work showcase, and a credit-billed file-conversion service.',
+				'Lead an ISO 27001-aligned information security management system covering all in-scope products: policies, gap analyses, control deviations, vendor management, and per-project annexes.',
+				'Make and document every product decision myself — scope cuts, vertical pivots (school-only → multi-vertical streaming), and pricing/positioning across the portfolio.',
+			],
+		},
+		{
+			title: 'STEM & Software Development Instructor',
 			company_name: 'Pompano Beach High School',
 			icon: broward,
 			iconBg: '#383E56',
-			date: 'Sep 2023–Present',
+			date: 'Sep 2023 – Present',
 			points: [
-				'Taught full-stack development using React, JavaScript, and HTML/CSS, with emphasis on SPA design and user-focused workflows.',
-				'Taught Comptia Security + to certifying students.',
-				'Guided students through creating real-time simulations using JavaScript Canvas API and interactive DOM scripting to create 2D video games and with animations.',
-				'Introduced students to Arduino microcontroller programming to enhance 3D-printed designs with interactive hardware features such as sensors, motors, and LEDs.',
-				'Visit my class website made by me: www.pghsgames.com',
+				'Teach full-stack web development (HTML / CSS / JavaScript, React) and 2D game development with the Canvas API, sprite-sheet animation, and parallax scrolling.',
+				'Teach CompTIA Security+ to certifying students — OWASP Top 10, network fundamentals, threat modeling, and applied cybersecurity practice.',
+				'Teach 3D modeling (Autodesk Fusion 360) and Arduino-based robotics — ESP32 / ESP8266 microcontrollers, RFID modules, sensors, motors, and integrating embedded hardware into capstone projects.',
+				'Sponsor the school robotics program; mentor students through team-based engineering projects from concept to working build.',
+				'Maintain a self-built class website at pghsgames.com used by all students as the curriculum hub.',
 			],
 		},
 		{
@@ -286,44 +160,41 @@ const Projects = () => {
 			company_name: 'Ali Web Solutions',
 			icon: ali,
 			iconBg: '#383E56',
-			date: 'March 2023 - July 2023',
+			date: 'March 2023 – July 2023',
 			points: [
-				'Developing and maintaining web applications using React.js and other related technologies.',
-				'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-				'Implementing responsive design and ensuring cross-browser compatibility.',
-				'Participating in code reviews and providing constructive feedback to other developers.',
+				'Built and maintained client-facing React.js applications and supporting ecosystem tooling.',
+				'Collaborated with designers, product managers, and other engineers to ship features end-to-end.',
+				'Implemented responsive, accessible UI and cross-browser-tested every release.',
+				'Participated in code review with constructive, peer-level feedback to other developers.',
 			],
 		},
 		{
-			title: 'Freelance Developer',
+			title: 'Freelance Full-Stack Developer',
 			company_name: 'Startup Websites',
 			icon: startupwebsites,
 			iconBg: '#E6DEDD',
-			date: 'June 2021 - Present',
+			date: 'June 2021 – Present',
 			points: [
 				'Designed and delivered interactive SPAs using React, TypeScript, and modular UI components.',
-				'Built 2D animations using Canvas, and JavaScript.',
-				'Created flipbook-style sprite animations from sequential images of a person to integrate realistic character motion into a video game engine.',
+				'Built 2D animations with the Canvas API and JavaScript, including flipbook sprite-sheet character animation for client video-game work.',
 				'Developed financial and compliance-related interfaces supporting user-specific logic, secure sessions, and role-based access.',
 				'Created responsive, cross-browser interfaces optimized for speed and accessibility.',
-				'Collaborated directly with clients to prototype and iterate on key features based on user workflows.',
-				"Use Wix's tools to create websites for clients, either from scratch or by customizing existing templates.",
-				'Utilizing Software as a Service (SaaS) tools to meets customer needs and requirements. ',
-				'Developing engaging content, selecting relevant images, and optimizing SEO for website growth.',
-				'Analyzing data: utilizing analytics and metrics to track user behavior and website performance.',
+				'Collaborated directly with clients to prototype and iterate based on real user workflows.',
+				'Built and customized SaaS websites for clients using Wix tooling when budget or timeline ruled out a custom build.',
+				'Owned SEO, analytics, and content strategy on engagements where it was part of the scope.',
 			],
 		},
 		{
-			title: 'Arduino - C Programming Language Robotics Instructor',
+			title: 'Arduino & Robotics Instructor',
 			company_name: 'Thornton Township High School',
 			icon: wildcat,
 			iconBg: '#383E56',
-			date: 'Aug 2014 - May 2021',
+			date: 'Aug 2014 – May 2021',
 			points: [
-				'Explaining concepts such as variables, functions and loops in an engaging manner.',
-				'Guiding students through the basics of circuitry, wiring and programming.',
-				'Helping students troubleshoot any issues they might have and offer advice on how to improve their project.',
-				'Guiding students through creating their own projects that integrate Arduino with other components.',
+				'Taught fundamentals of the C programming language through Arduino microcontroller projects.',
+				'Guided students through circuit design, wiring, soldering, and embedded programming.',
+				'Mentored project-based learning where students built integrated Arduino projects from spec to working demo.',
+				'Helped students troubleshoot hardware and code together, building the diagnostic habits engineering work requires.',
 			],
 		},
 	];
@@ -333,7 +204,7 @@ const Projects = () => {
 			<Container>
 				<Row>
 					<Col size={12}>
-						<TrackVisibility partialVisibility>
+						<TrackVisibility partialVisibility once>
 							{({ isVisible }) => (
 								<div className={isVisible ? 'animate__animated animate__fadeIn' : ''}>
 									<h2>Projects & Experience</h2>
@@ -343,9 +214,6 @@ const Projects = () => {
 											<Nav.Item>
 												<Nav.Link eventKey='first'>Projects</Nav.Link>
 											</Nav.Item>
-											{/* <Nav.Item>
-                      <Nav.Link eventKey="second">Experience</Nav.Link>
-                    </Nav.Item> */}
 											<Nav.Item>
 												<Nav.Link eventKey='third'>Experience</Nav.Link>
 											</Nav.Item>
@@ -358,11 +226,8 @@ const Projects = () => {
 													})}
 												</Row>
 											</Tab.Pane>
-											{/* <Tab.Pane eventKey="second">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane> */}
 											<Tab.Pane eventKey='third'>
-												<p>10 years in high school science education and 7 years in tech.</p>
+												<p>10+ years in education and 7+ years building software.</p>
 												<div className='component' id='experience'>
 													<div className='mt-20 flex flex-col'>
 														<VerticalTimeline>
