@@ -12,6 +12,7 @@ import coursecreator from '../assets/img/coursecreator.webp';
 import camcorderrescue from '../assets/img/camcorderrescue.webp';
 import altech from '../assets/img/altech.webp';
 import inteled from '../assets/img/inteled.webp';
+import drewit from '../assets/img/drewit.jpeg';
 
 import ali from '../assets/img/ali.webp';
 import startupwebsites from '../assets/img/startupwebsites.webp';
@@ -124,6 +125,19 @@ const Projects = () => {
 			],
 			source_code_link: '',
 			website_link: 'https://restedteacher.com',
+		},
+		{
+			title: 'Drew-It',
+			description:
+				"In loving memory of my little brother Drew, Drew-It turns a prompt into an AI-generated image and lets users share it to a public gallery. MERN stack: React + Vite client, Express + MongoDB + Mongoose server, Stability AI for image generation, Cloudinary for image storage. Originally gated behind sign-in; I rewrote the server to be open AND safe — per-IP rate limits on the generation endpoint (Stability AI calls cost real money), MongoDB operator sanitization, strict input validation, CORS lockdown, helmet headers, and a tightened body-size cap so a curl loop can't run up the bill.",
+			imgUrl: drewit,
+			tags: [
+				{ name: 'react + express', color: 'blue-text-gradient' },
+				{ name: 'mongoDB · stability AI · cloudinary', color: 'green-text-gradient' },
+				{ name: 'public · rate-limited', color: 'orange-text-gradient' },
+			],
+			source_code_link: 'https://github.com/4minuterobotics/MERN-AI-image-generator',
+			website_link: 'https://drew-it.vercel.app',
 		},
 	];
 
