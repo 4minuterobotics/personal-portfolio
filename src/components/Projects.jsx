@@ -7,7 +7,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 import luxuryPicnics from '../assets/img/luxuryPicnics.webp';
 import heardso from '../assets/img/heardso.webp';
-import schooltreasure from '../assets/img/schooltreasurepng.png';
+import schooltreasure from '../assets/img/schooltreasure.webp';
 import coursecreator from '../assets/img/coursecreator.webp';
 import camcorderrescue from '../assets/img/camcorderrescue.webp';
 import altech from '../assets/img/altech.webp';
